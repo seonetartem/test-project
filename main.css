@@ -1,0 +1,235 @@
+:root {
+    --main-bg-color: #ffffff;
+    --main-border-color: #d3d3d3;
+    --card-border-color: #58d697;
+    --slider-primary-color: #3bc785;
+    --purple-color: #800080;
+    --white-color: #ffffff;
+    --gray-color: gray;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+section {
+    padding: 4rem;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+footer :first-child {
+    margin-bottom: 1rem;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    border: 2px solid var(--main-border-color);
+    border-radius: 4px;
+}
+
+input[type=range] {
+    width: 100%;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    color: var(--gray-color);
+}
+
+h4 {
+    text-align: center;
+    color: var(--gray-color);
+}
+
+.section-h2 {
+    margin-bottom: 4rem;
+}
+
+.btn {
+    all: unset;
+    height: 70px;
+    font-size: 24px!important;
+    margin-top: 50px!important;
+    max-width: 360px!important;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.125rem;
+    margin: 30px auto 0!important;
+    max-width: 360px!important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 4px;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    color: var(--white-color);
+    background: linear-gradient(270deg,#12e590,#45bf82);
+}
+
+.btn-primary .label {
+    display: block;
+}
+
+.btn-primary .root {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+    border-radius: inherit;
+    pointer-events: none;
+    height: 70px;
+}
+
+.btn-next {
+    background-color: var(--purple-color);
+    color: var(--white-color);
+    border-radius: 4px;
+    height: 70px;
+}
+
+.btn-back {
+    color: var(--purple-color);
+}
+
+.btn-card {
+    all: unset;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    width: 220px;
+    min-height: 190px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,.15);
+}
+
+.btn-card:hover {
+    box-shadow: 0 12px 5px -0.5rem rgba(0,0,0,.2);
+    border-color: #228c57;
+}
+
+.btn-card .btn-icon {
+    display: block;
+    margin: 1.25rem auto 0;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.btn-card .btn-label {
+    display: block;
+    height: 55px;
+    margin: 5px;
+    line-height: 1.375rem;
+    text-align: center;
+    font-size: 1.0625rem;
+    font-weight: 400;
+    letter-spacing: .3px;
+}
+
+.refinance .btn-icon {
+    background-image: url(assets/refinance.svg);
+}
+
+.buy-home .btn-icon {
+    background-image: url(assets/purchase.svg);
+}
+
+.primary .btn-icon {
+    background-image: url(assets/primary.svg);
+}
+
+.secondary .btn-icon {
+    background-image: url(assets/secondary.svg);
+}
+
+.investment .btn-icon {
+    background-image: url(assets/investment.svg);
+}
+
+.single .btn-icon {
+    background-image: url(assets/primary.svg);
+}
+
+.multi .btn-icon {
+    background-image: url(assets/multi.svg);
+}
+
+.townhome-condo .btn-icon {
+    background-image: url(assets/condo.svg);
+}
+
+.mobile .btn-icon {
+    background-image: url(assets/mobile.svg);
+}
+
+.input-form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-form-group :first-child {
+    margin-right: 1rem;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--slider-primary-color);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 33px;
+    height: 33px;
+    background: var(--white-color);
+    border: 2px solid var(--card-border-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 0px 8px rgba(63, 81, 181, 0.16);
+}
+
+.evaluated-property-value-label {
+    letter-spacing: 3px;
+    font-size: 32px;
+    margin-bottom: 38px;
+    color: var(--slider-primary-color);
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link preload rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main role="main">
+        <form action="">
+            <section class="step-0">
+                <div class="input-form-group">
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                </div>
+                <h2>Where is your home located?</h2>
+                <h3>Enter your city or zip code</h3>
+                <div>
+                    <input type="text" name="location" placeholder="City or Zip Code">
+                </div>
+                <footer>
+                    <button type="button" class="btn btn-next" onClick="nextHandler(1)">Next</button>
+                    <button type="button" class="btn btn-back">Back</button>
+                </footer>
+            </section>
+            <section class="step-1" style="display: none;">
+                <button type="button" class="btn-card refinance" onclick="nextHandler(2)">
+                    <span class="btn-icon"></span>
+                    <span class="btn-label">Refinance</span>
+                </button>
+                <button type="button" class="btn-card buy-home" onclick="nextHandler(2)">
+                    <span class="btn-icon"></span>
+                    <span class="btn-label">Buy a Home</span>
+                </button>
+                <div>
+                    <h4>Won't Affect Credit. 100% FREE. Takes 2 Minutes to Start.</h4>
+                </div>
+            </section>
+            <section class="step-2" style="display: none;">
+                <h2 class="section-h2">How will you be using this property?</h2>
+                <div>
+                    <button type="button" class="btn-card primary" onclick="nextHandler(3)">
+                        <span class="btn-icon"></span>
+                        <span class="btn-label">Primary Residence</span>
+                    </button>
+                    <button type="button" class="btn-card secondary" onclick="nextHandler(3)">
+                        <span class="btn-icon"></span>
+                        <span class="btn-label">Secondary Home</span>
+                    </button>
+                    <button type="button" class="btn-card investment" onclick="nextHandler(3)">
+                        <span class="btn-icon"></span>
+                        <span class="btn-label">Investment Property</span>
+                    </button>
+                </div>
+            </section>
+            <section class="step-3" style="display: none;">
+                <h2 class="section-h2">Property Type</h2>
+                <div>
+                    <button type="button" class="btn-card single" onclick="nextHandler(4)">
+                        <span class="btn-icon"></span>
+                        <span class="btn-label">Single Family</span>
+                    </button>
+                    <button type="button" class="btn-card multi" onclick="nextHandler(4)">
+                        <span class="btn-icon"></span>
+                        <span class="btn-label">Multi Family</span>
+                    </button>
+                    <button type="button" class="btn-card townhome-condo" onclick="nextHandler(4)">
+                        <span class="btn-icon"></span>
+                        <span class="btn-label">Town Home/Condo</span>
+                    </button>
+                    <button type="button" class="btn-card mobile" onclick="nextHandler(4)">
+                        <span class="btn-icon"></span>
+                        <span class="btn-label">Mobile Home</span>
+                    </button>
+                </div>
+            </section>
+            <section class="step-4">
+                <h2 class="section-h2">Estimated Property Value</h2>
+                <div id="range-input" class="evaluated-property-value-label">Under $10,000</div>
+                <div class="slide-container">
+                    <input
+                        type="range"
+                        min="1"
+                        max="75"
+                        value="1"
+                        class="slider"
+                        id="myRange"
+                        oninput="setLabel(value)"
+                    >
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary">
+                        <span class="label">NEXT</span>
+                        <span class="root"></span>
+                    </button>
+                </div>
+            </section>
+        </form>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
