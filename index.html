@@ -11,16 +11,23 @@
         <form action="">
             <section class="step-0">
                 <div class="input-form-group">
-                    <input type="text" name="firstName" placeholder="First Name" required>
-                    <input type="text" name="lastName" placeholder="Last Name" required>
+                    <div class="input-container">
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" onchange="valueChangeHandler(this, 'firstName')">
+                        <span class="error-label firstName-error" style="display: none;">Please enter your first name</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" onchange="valueChangeHandler(this, 'lastName')" />
+                        <span class="error-label lastName-error" style="display: none;">Please enter your last name</span>
+                    </div>
                 </div>
                 <h2>Where is your home located?</h2>
                 <h3>Enter your city or zip code</h3>
-                <div>
-                    <input type="text" name="location" placeholder="City or Zip Code">
+                <div class="input-container">
+                    <input type="text" id="location" name="location" placeholder="City or Zip Code" onchange="valueChangeHandler(this, 'location')">
+                    <span class="error-label location-error" style="display: none;">Please enter your city or zip code</span>
                 </div>
                 <footer>
-                    <button type="button" class="btn btn-next" onClick="nextHandler(1)">Next</button>
+                    <button type="button" class="btn btn-next" onclick="validateAndGoNext()">Next</button>
                     <button type="button" class="btn btn-back">Back</button>
                 </footer>
             </section>

@@ -38,8 +38,21 @@ input[type=text] {
     border-radius: 4px;
 }
 
+input[type=text].error {
+    border-color: red;
+}
+
 input[type=range] {
     width: 100%;
+}
+
+.input-container {
+    width: 100%;
+    text-align: left;
+}
+
+.error-label {
+    color: red;
 }
 
 h2 {

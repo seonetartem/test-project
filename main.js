@@ -1,3 +1,45 @@
+function getFirstName() {
+    return document.getElementById('firstName');
+}
+function getLastName() {
+    return document.getElementById('lastName');
+}
+function getLocation() {
+    return document.getElementById('location');
+}
+
+function valueChangeHandler($el, name) {
+    validateField(name, $el.value);
+}
+
+function validateAndGoNext() {
+    const firstName = getFirstName().value;
+    const lastName = getLastName().value;
+    const location = getLocation().value;
+
+    showErrors(firstName, lastName, location);
+
+    if (firstName && lastName && location) {
+        nextHandler(1);
+    }
+}
+
+function showErrors(firstName, lastName, location) {
+    validateField('firstName', firstName);
+    validateField('lastName', lastName);
+    validateField('location', location);
+}
+
+function validateField(name, value) {
+    if (!value) {
+        document.getElementsByClassName(`${name}-error`)[0].style.display = 'block';
+        document.getElementById(name).classList.add('error');
+    } else {
+        document.getElementsByClassName(`${name}-error`)[0].style.display = 'none';
+        document.getElementById(name).classList.remove('error');
+    }
+}
+
 function nextHandler(index) {
     document.getElementsByClassName(`step-${index-1}`)[0].style.display='none';
     document.getElementsByClassName(`step-${index}`)[0].style.display='block';
